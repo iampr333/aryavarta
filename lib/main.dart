@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Screens/home_page.dart';
+import 'Screens/card_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: CardHomeScreen(),
     );
   }
 }

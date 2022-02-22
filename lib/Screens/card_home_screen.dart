@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aryavarta/Constant.dart';
 
-class HomePage extends StatelessWidget {
+class CardHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
