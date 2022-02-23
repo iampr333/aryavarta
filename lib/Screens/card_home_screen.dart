@@ -1,37 +1,57 @@
 import 'package:aryavarta/card_container_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:aryavarta/Constant.dart';
 
 class CardHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: SafeArea(
+    return Scaffold(
+      body: SafeArea(
         child: Row(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CardContainer(
-                  'ANCIENT HISTORY',
-                ),
-                CardContainer(
-                  'MEDIEVAL HISTORY',
-                ),
-              ],
+            Flexible(
+              child: Column(
+                children: [
+                  const Expanded(
+                    child: SizedBox(
+                      height: 25,
+                    ),
+                  ),
+                  CardContainer(
+                    'ANCIENT HISTORY',
+                  ),
+                  CardContainer(
+                    'MEDIEVAL HISTORY',
+                  ),
+                  const Expanded(
+                    child: SizedBox(
+                      height: 25,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CardContainer(
-                  'MODERN HISTORY',
-                ),
-                CardContainer(
-                  'FREEDOM STRUGGLE',
-                ),
-              ],
+            Flexible(
+              child: Column(
+                children: [
+                  const Expanded(
+                    child: SizedBox(
+                      height: 25,
+                    ),
+                  ),
+                  CardContainer(
+                    'MODERN HISTORY',
+                  ),
+                  CardContainer(
+                    'FREEDOM STRUGGLE',
+                  ),
+                  const Expanded(
+                    child: SizedBox(
+                      height: 25,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

@@ -1,14 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CardContainer extends StatelessWidget {
   String cardTitle;
+
   CardContainer(this.cardTitle);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 125,
-      width: 185,
+    return SizedBox(
       child: Card(
         margin: EdgeInsets.all(10),
         shape: RoundedRectangleBorder(
@@ -16,20 +16,22 @@ class CardContainer extends StatelessWidget {
         ),
         elevation: 10,
         color: Colors.yellow,
-        child: Center(
-          child: ListTile(
-            leading: const Icon(
-              Icons.import_contacts,
-              size: 20,
-            ),
-            title: Text(
-              cardTitle,
-              style: const TextStyle(
-                fontSize: 15,
-                color: Colors.black,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              const Icon(Icons.icecream_outlined),
+              SizedBox(
+                height: 10,
               ),
-            ),
-            iconColor: Colors.black,
+              Text(
+                cardTitle,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 25,
+                ),
+              ),
+            ],
           ),
         ),
       ),
