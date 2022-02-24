@@ -1,38 +1,58 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:aryavarta/Constant.dart';
+double offset=5;
+double shadowBlur=0.0;
 class CardContainer extends StatelessWidget {
   String cardTitle;
-
-  CardContainer(this.cardTitle);
+  String imgLink;
+  Function onTap;
+  CardContainer(this.cardTitle, this.imgLink,this.onTap);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return GestureDetector(
+      onTap:() {
+        onTap;
+      },
       child: Card(
-        margin: EdgeInsets.all(10),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
-        elevation: 10,
-        color: Colors.yellow,
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            children: [
-              const Icon(Icons.icecream_outlined),
-              SizedBox(
-                height: 10,
+        margin: EdgeInsets.all(8),
+        elevation: 15,
+        color:Color(0xFF333366),
+
+        child: Column(
+          children: [
+            Expanded(
+              flex: 4,
+              child: Container(
+
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(5),
+                      bottom: Radius.zero,
+                    ),
+
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        imgLink,
+                      ),
+                      fit: BoxFit.cover,
+                    )),
               ),
-              Text(
+            ),
+
+            const SizedBox(
+              height: 2,
+            ),
+            Expanded(
+              flex: 1,
+              child: Text(
                 cardTitle,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 25,
-                ),
+                style: kTitleTextStyle,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
