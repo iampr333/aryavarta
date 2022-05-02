@@ -20,17 +20,9 @@ class CardHomeScreen extends StatefulWidget {
 }
 
 class _CardHomeScreenState extends State<CardHomeScreen> {
-  void onTap(String msg) {
-    setState(() {
-      print(msg + " pressed");
-    });
-
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Center(
           child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -45,15 +37,15 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
               children: [
                 Expanded(
                   child: CardContainer(
-                      'Ancient History', 'https://bit.ly/3vjSjLz', () {
-                    onTap('Ancient');
-                  }),
+                    'Ancient History',
+                    'https://bit.ly/3vjSjLz',
+                  ),
                 ),
                 Expanded(
                   child: CardContainer(
-                      'Medieval history', 'https://bit.ly/3peFJct', () {
-                    onTap('Ancient');
-                  }),
+                    'Medieval history',
+                    'https://bit.ly/3peFJct',
+                  ),
                 ),
               ],
             ),
@@ -64,15 +56,15 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
               children: [
                 Expanded(
                   child: CardContainer(
-                      'Modern History', 'https://bit.ly/3sX8Ule', () {
-                    onTap('Ancient');
-                  }),
+                    'Modern History',
+                    'https://bit.ly/33MQQC3',
+                  ),
                 ),
                 Expanded(
-                  child:
-                      CardContainer('Partition', 'https://bit.ly/33MQQC3', () {
-                    onTap('Ancient');
-                  }),
+                  child: CardContainer(
+                    'Partition',
+                    'https://bit.ly/33MQQC3',
+                  ),
                 ),
               ],
             ),
