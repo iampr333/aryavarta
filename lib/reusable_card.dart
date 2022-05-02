@@ -6,14 +6,18 @@ class ReusableCard extends StatelessWidget {
   String heading;
   String date;
   String body;
+  String tag;
   final double mainHeight;
-
+  Function()? onTap;
   ReusableCard(
       {required this.image,
       required this.mainHeight,
       required this.date,
       required this.heading,
-      required this.body});
+        required this.tag,
+      required this.body,
+        this.onTap
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +34,12 @@ class ReusableCard extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(2),
                 height: mainHeight * 0.25,
-                child: Image(
-                  image: AssetImage(image),
-                  fit: BoxFit.cover,
+                child: Hero(
+                  tag: 'cardImage',
+                  child: Image(
+                    image: AssetImage(image),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
@@ -76,6 +83,7 @@ class ReusableCard extends StatelessWidget {
                       ),
                     ),
                     InkWell(
+                      onTap: onTap,
                       child: Container(
                         alignment: Alignment.centerRight,
                         padding: EdgeInsets.only(right: 16),
