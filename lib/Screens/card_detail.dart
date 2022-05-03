@@ -1,7 +1,6 @@
 import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:aryavarta/dialog_box.dart';
 import 'package:aryavarta/reusable_card.dart';
-
 import 'package:flutter/material.dart';
 
 class CardDetail extends StatefulWidget {
