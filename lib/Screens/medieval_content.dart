@@ -35,7 +35,10 @@ class _MedivalContentState extends State<MedivalContent> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CardDetail(
-                        image: "asset/1206-12.jpeg",
+                        image: MedievalData()
+                            .northIndiaDynasty[index]
+                            .images
+                            .image,
                         date: MedievalData()
                                 .northIndiaDynasty[index]
                                 .era
@@ -57,7 +60,7 @@ class _MedivalContentState extends State<MedivalContent> {
                 },
                 tag: 'cardImage',
                 mainHeight: mainHeight,
-                image: "asset/1206-12.jpeg",
+                image: MedievalData().northIndiaDynasty[index].images.image,
                 date: MedievalData()
                         .northIndiaDynasty[index]
                         .era

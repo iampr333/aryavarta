@@ -28,6 +28,7 @@ class _CardDetailState extends State<CardDetail> {
   Widget build(BuildContext context) {
     final appBarHieght = AppBar().preferredSize.height;
     final mainHeight = MediaQuery.of(context).size.height - appBarHieght;
+    final mainWidth = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Scaffold(
       body: Container(
@@ -35,107 +36,95 @@ class _CardDetailState extends State<CardDetail> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Image(
-                image: AssetImage(widget.image),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Color(0xffE8E8E8),
-                  width: 1,
-                )),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Card(
+                elevation: 1,
+                child: Column(
                   children: [
-                    Text(
-                      widget.heading,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Image(
+                      image: AssetImage(widget.image),
                     ),
-                    InkWell(
-                      onTap: () {
-                        showCustomDialog(context);
-                      },
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(8),
+                      // decoration: BoxDecoration(
+                      //     border: Border.all(
+                      //   color: Color(0xffE8E8E8),
+                      //   width: 1,
+                      // )),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "View Map",
-                            style: TextStyle(fontSize: 16, color: Colors.red),
+                            widget.heading,
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                          Icon(
-                            Icons.map_outlined,
-                            color: Colors.red,
+                          Text(
+                            widget.date,
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.black54,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ],
                       ),
                     ),
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Founder - Akbar',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              showCustomDialog(context);
+                            },
+                            child: Row(
+                              children: [
+                                Text(
+                                  "View Map",
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.red),
+                                ),
+                                Icon(
+                                  Icons.map_outlined,
+                                  color: Colors.red,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.all(8),
+                      child: Text(
+                        widget.body,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ),
                   ],
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Color(0xffE8E8E8),
-                  width: 1,
-                )),
-                child: Text(
-                  widget.date,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.lightBlue,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Color(0xffE8E8E8),
-                  width: 1,
-                )),
-                child: Text(
-                  'Akbar',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.lightBlue,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Color(0xffE8E8E8),
-                  width: 1,
-                )),
-                child: Text(
-                  widget.body,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.black54,
-                  ),
                 ),
               ),
               SizedBox(
@@ -174,7 +163,11 @@ class _CardDetailState extends State<CardDetail> {
                                 flex: 5,
                                 child: Container(
                                   child: Image(
-                                    image: AssetImage("asset/1206-12.jpeg"),
+                                    image: AssetImage(MedievalData()
+                                        .northIndiaDynasty[widget.indexImported]
+                                        .kings[index]
+                                        .images
+                                        .image),
                                   ),
                                 ),
                               ),

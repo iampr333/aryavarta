@@ -64,6 +64,10 @@ flutter:
 
   assets:
     - asset/
+    - asset/dynasty/
+    - asset/slave_kings/
+    - asset/khilji_kings/
+
 
 
 
