@@ -14,7 +14,7 @@ class MedivalContent extends StatefulWidget {
 
 class _MedivalContentState extends State<MedivalContent> {
   List<bool> isOpen = [false, false, false];
-  List<String> dateList=['1200','1300','1400','1500','1600','1700'];
+  List<String> dateList = ['1200', '1300', '1400', '1500', '1600', '1700'];
   @override
   Widget build(BuildContext context) {
     final appBarHieght = AppBar().preferredSize.height;
@@ -29,12 +29,11 @@ class _MedivalContentState extends State<MedivalContent> {
             shrinkWrap: true,
             itemBuilder: (BuildContext context, int index) {
               return ReusableCard(
-                onTap: (){
+                onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => CardDetail(
-                        tag: 'cardImage',
                         image: "asset/1206-12.jpeg",
                         date: dateList[index],
                         body: 'Slave dynasty, (1206–90)'

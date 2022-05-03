@@ -1,4 +1,5 @@
 import 'package:aryavarta/Screens/card_detail.dart';
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 
 class ReusableCard extends StatelessWidget {
@@ -14,10 +15,9 @@ class ReusableCard extends StatelessWidget {
       required this.mainHeight,
       required this.date,
       required this.heading,
-        required this.tag,
+      required this.tag,
       required this.body,
-        this.onTap
-      });
+      this.onTap});
 
   @override
   Widget build(BuildContext context) {

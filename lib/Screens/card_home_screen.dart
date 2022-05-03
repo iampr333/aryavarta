@@ -1,3 +1,4 @@
+import 'package:aryavarta/Screens/medieval_content.dart';
 import 'package:aryavarta/card_container_style.dart';
 import 'package:flutter/material.dart';
 
@@ -40,9 +41,15 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
                   ),
                 ),
                 Expanded(
-                  child: CardContainer(
-                    'Medieval history',
-                    'https://bit.ly/3peFJct',
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => MedivalContent()));
+                    },
+                    child: CardContainer(
+                      'Medieval history',
+                      'https://bit.ly/3peFJct',
+                    ),
                   ),
                 ),
               ],
