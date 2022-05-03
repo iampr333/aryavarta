@@ -1,36 +1,37 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:aryavarta/Constant.dart';
-
-double offset = 5;
-double shadowBlur = 0.0;
-
+double offset=5;
+double shadowBlur=0.0;
 class CardContainer extends StatelessWidget {
   String cardTitle;
   String imgLink;
   Function onTap;
-
-  CardContainer(this.cardTitle, this.imgLink, this.onTap);
+  CardContainer(this.cardTitle, this.imgLink,this.onTap);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
+      onTap:() {
         onTap;
       },
       child: Card(
-        margin: const EdgeInsets.all(8),
+        margin: EdgeInsets.all(8),
         elevation: 15,
-        color: const Color(0xFF333366),
+        color:Color(0xFF333366),
+
         child: Column(
           children: [
             Expanded(
               flex: 4,
               child: Container(
+
                 decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.vertical(
+                    borderRadius: BorderRadius.vertical(
                       top: Radius.circular(5),
                       bottom: Radius.zero,
                     ),
+
                     image: DecorationImage(
                       image: NetworkImage(
                         imgLink,
@@ -39,6 +40,7 @@ class CardContainer extends StatelessWidget {
                     )),
               ),
             ),
+
             const SizedBox(
               height: 2,
             ),
