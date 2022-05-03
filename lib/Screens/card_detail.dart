@@ -1,6 +1,7 @@
+import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:aryavarta/dialog_box.dart';
 import 'package:aryavarta/reusable_card.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 class CardDetail extends StatefulWidget {
@@ -8,12 +9,14 @@ class CardDetail extends StatefulWidget {
   final String heading;
   final String date;
   final String body;
+  final int indexImported;
 
   CardDetail({
     required this.date,
     required this.heading,
     required this.image,
     required this.body,
+    required this.indexImported,
   });
 
   @override
@@ -32,11 +35,9 @@ class _CardDetailState extends State<CardDetail> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Hero(
-                  tag: "cardImage",
-                  child: Image(
-                    image: AssetImage(widget.image),
-                  )),
+              Image(
+                image: AssetImage(widget.image),
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -147,7 +148,7 @@ class _CardDetailState extends State<CardDetail> {
                     child: Container(
                       width: double.infinity,
                       child: Text(
-                        "Kings In Slave Dynasty -",
+                        "Kings -",
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
@@ -158,39 +159,55 @@ class _CardDetailState extends State<CardDetail> {
               Container(
                 height: mainHeight * .25,
                 child: ListView.builder(
-                    itemCount: 8,
+                    itemCount: MedievalData()
+                        .northIndiaDynasty[widget.indexImported]
+                        .kings
+                        .length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
-                      return Expanded(
-                        child: Container(
-                          height: mainHeight * .25,
-                          child: Card(
-                            child: Column(
-                              children: [
-                                Expanded(
-                                  flex: 5,
-                                  child: Container(
-                                    child: Image(
-                                      image: AssetImage("asset/1206-12.jpeg"),
-                                    ),
+                      return Container(
+                        height: mainHeight * .25,
+                        child: Card(
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Container(
+                                  child: Image(
+                                    image: AssetImage("asset/1206-12.jpeg"),
                                   ),
                                 ),
-                                Text(
-                                  "Mahatma Akbar",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black54,
-                                    fontSize: 16,
-                                  ),
+                              ),
+                              Text(
+                                MedievalData()
+                                    .northIndiaDynasty[widget.indexImported]
+                                    .kings[index]
+                                    .kingsName,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black54,
+                                  fontSize: 16,
                                 ),
-                                Text(
-                                  "1206-2019",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                  ),
+                              ),
+                              Text(
+                                MedievalData()
+                                        .northIndiaDynasty[0]
+                                        .kings[index]
+                                        .era
+                                        .first
+                                        .toString() +
+                                    " - " +
+                                    MedievalData()
+                                        .northIndiaDynasty[0]
+                                        .kings[index]
+                                        .era
+                                        .second
+                                        .toString(),
+                                style: TextStyle(
+                                  color: Colors.black,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       );
@@ -206,7 +223,7 @@ class _CardDetailState extends State<CardDetail> {
                     child: Container(
                       width: double.infinity,
                       child: Text(
-                        "Events In Slave Dynasty-",
+                        "Events -",
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
@@ -220,36 +237,34 @@ class _CardDetailState extends State<CardDetail> {
                     itemCount: 8,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
-                      return Expanded(
-                        child: Container(
-                          height: mainHeight * .25,
-                          child: Card(
-                            child: Column(
-                              children: [
-                                Expanded(
-                                  flex: 5,
-                                  child: Container(
-                                    child: Image(
-                                      image: AssetImage("asset/1206-12.jpeg"),
-                                    ),
+                      return Container(
+                        height: mainHeight * .25,
+                        child: Card(
+                          child: Column(
+                            children: [
+                              Expanded(
+                                flex: 5,
+                                child: Container(
+                                  child: Image(
+                                    image: AssetImage("asset/1206-12.jpeg"),
                                   ),
                                 ),
-                                Text(
-                                  "Haldi-Ghati War",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black54,
-                                    fontSize: 16,
-                                  ),
+                              ),
+                              Text(
+                                "Haldi War",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black54,
+                                  fontSize: 16,
                                 ),
-                                Text(
-                                  "1206",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                  ),
+                              ),
+                              Text(
+                                "1206",
+                                style: TextStyle(
+                                  color: Colors.black,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       );
