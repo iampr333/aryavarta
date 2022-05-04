@@ -6,13 +6,13 @@ class CardDetail extends StatefulWidget {
   final String heading;
   final String date;
   final String body;
-  final String tag;
+
   CardDetail(
       {required this.date,
       required this.heading,
       required this.image,
       required this.body,
-      required this.tag});
+      });
 
   @override
   _CardDetailState createState() => _CardDetailState();
@@ -28,7 +28,8 @@ class _CardDetailState extends State<CardDetail> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Hero(tag: 'cardImage', child: Image.network(widget.image)),
+              Hero(
+                  tag: 'cardImage', child: Image.network(widget.image)),
               SizedBox(
                 height: 15,
               ),

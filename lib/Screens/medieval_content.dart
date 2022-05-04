@@ -34,7 +34,7 @@ class _MedivalContentState extends State<MedivalContent> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => CardDetail(
-                        tag: 'cardImage',
+
                         image: "asset/1206-12.jpeg",
                         date: dateList[index],
                         body: 'Slave dynasty, (1206–90)'
