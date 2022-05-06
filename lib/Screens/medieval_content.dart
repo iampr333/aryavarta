@@ -14,8 +14,6 @@ class MedivalContent extends StatefulWidget {
 }
 
 class _MedivalContentState extends State<MedivalContent> {
-  List<bool> isOpen = [false, false, false];
-  List<String> dateList = ['1200', '1300', '1400', '1500', '1600', '1700'];
   @override
   Widget build(BuildContext context) {
     final appBarHieght = AppBar().preferredSize.height;
