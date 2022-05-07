@@ -1,5 +1,6 @@
 import 'package:aryavarta/Screens/card_detail.dart';
 import 'package:aryavarta/Screens/medieval_content.dart';
+import 'package:aryavarta/Screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'Screens/card_home_screen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: CardHomeScreen(),
+      home: SplashScreen(),
     );
   }
 }

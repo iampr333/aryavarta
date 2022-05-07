@@ -16,11 +16,11 @@ class CardContainer extends StatelessWidget {
     return Card(
       margin: EdgeInsets.all(8),
       elevation: 15,
-      color: Color(0xFF333366),
+      color: Colors.teal,
       child: Column(
         children: [
           Expanded(
-            flex: 4,
+            flex: 6,
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.vertical(
@@ -40,10 +40,12 @@ class CardContainer extends StatelessWidget {
           ),
           Expanded(
             flex: 1,
-            child: Text(
-              cardTitle,
-              textAlign: TextAlign.center,
-              style: kTitleTextStyle,
+            child: Center(
+              child: Text(
+                cardTitle,
+                textAlign: TextAlign.center,
+                style: kTitleTextStyle,
+              ),
             ),
           ),
         ],
