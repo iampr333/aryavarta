@@ -1,4 +1,5 @@
 import 'package:aryavarta/Screens/card_detail.dart';
+import 'package:aryavarta/Screens/quiz_screen.dart';
 import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,8 @@ class MedivalContent extends StatefulWidget {
 }
 
 class _MedivalContentState extends State<MedivalContent> {
-  List<bool> isOpen = [false, false, false];
-  List<String> dateList = ['1200', '1300', '1400', '1500', '1600', '1700'];
-  @override
+
+   @override
   Widget build(BuildContext context) {
     final appBarHieght = AppBar().preferredSize.height;
     final mainHeight = MediaQuery.of(context).size.height - appBarHieght;
@@ -25,57 +25,77 @@ class _MedivalContentState extends State<MedivalContent> {
         backgroundColor: Colors.white,
         body: Container(
           margin: EdgeInsets.all(8),
-          child: ListView.builder(
-            itemCount: MedievalData().northIndiaDynasty.length,
-            shrinkWrap: true,
-            itemBuilder: (BuildContext context, int index) {
-              return ReusableCard(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CardDetail(
-                        image: MedievalData()
-                            .northIndiaDynasty[index]
-                            .images
-                            .image,
-                        date: MedievalData()
-                            .northIndiaDynasty[index]
-                            .era
-                            .first
-                            .toString() +
-                            "-" +
-                            MedievalData()
-                                .northIndiaDynasty[index]
-                                .era
-                                .second
-                                .toString(),
-                        body: MedievalData().northIndiaDynasty[index].about,
-                        heading:
-                        MedievalData().northIndiaDynasty[index].dynastyName,
-                        indexImported: index,
-                      ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: MedievalData().northIndiaDynasty.length,
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index) {
+                    return ReusableCard(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CardDetail(
+                              image: MedievalData()
+                                  .northIndiaDynasty[index]
+                                  .images
+                                  .image,
+                              date: MedievalData()
+                                  .northIndiaDynasty[index]
+                                  .era
+                                  .first
+                                  .toString() +
+                                  "-" +
+                                  MedievalData()
+                                      .northIndiaDynasty[index]
+                                      .era
+                                      .second
+                                      .toString(),
+                              body: MedievalData().northIndiaDynasty[index].about,
+                              heading:
+                              MedievalData().northIndiaDynasty[index].dynastyName,
+                              indexImported: index,
+                            ),
+                          ),
+                        );
+                      },
+                      tag: 'cardImage',
+                      mainHeight: mainHeight,
+                      image: MedievalData().northIndiaDynasty[index].images.image,
+                      date: MedievalData()
+                          .northIndiaDynasty[index]
+                          .era
+                          .first
+                          .toString() +
+                          "-" +
+                          MedievalData()
+                              .northIndiaDynasty[index]
+                              .era
+                              .second
+                              .toString(),
+                      body: MedievalData().northIndiaDynasty[index].about,
+                      heading: MedievalData().northIndiaDynasty[index].dynastyName,
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                    onPressed: (){
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => QuizScreen()));
+                    },
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Color(0xff283593)),
                     ),
-                  );
-                },
-                tag: 'cardImage',
-                mainHeight: mainHeight,
-                image: MedievalData().northIndiaDynasty[index].images.image,
-                date: MedievalData()
-                    .northIndiaDynasty[index]
-                    .era
-                    .first
-                    .toString() +
-                    "-" +
-                    MedievalData()
-                        .northIndiaDynasty[index]
-                        .era
-                        .second
-                        .toString(),
-                body: MedievalData().northIndiaDynasty[index].about,
-                heading: MedievalData().northIndiaDynasty[index].dynastyName,
-              );
-            },
+                    child: Text('Quiz')
+                )
+              ],
+            ),
           ),
         ),
       ),

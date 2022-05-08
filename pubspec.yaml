@@ -37,7 +37,8 @@ dependencies:
   readmore: ^2.1.0
   animations: ^2.0.2
   photo_view: ^0.13.0
-
+  animated_text_kit: ^4.2.1
+  google_fonts: ^2.3.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -67,6 +68,11 @@ flutter:
     - asset/dynasty/
     - asset/slave_kings/
     - asset/khilji_kings/
+    - asset/later_mughal_kings/
+    - asset/lodi_kings/
+    - asset/mughals_kings/
+    - asset/sayyid_kings/
+    - asset/tughlaqs_kings/
 
 
 

@@ -1,3 +1,4 @@
+import 'package:aryavarta/Screens/king_detail.dart';
 import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:aryavarta/dialog_box.dart';
 import 'package:aryavarta/reusable_card.dart';
@@ -80,12 +81,18 @@ class _CardDetailState extends State<CardDetail> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                'Founder - Akbar',
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w600,
+                              Expanded(
+                                child: Text(
+                                  'Founder - ' +
+                                      MedievalData()
+                                          .northIndiaDynasty[widget.indexImported]
+                                          .kings[0]
+                                          .kingsName,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
                               ),
                               InkWell(
@@ -155,51 +162,89 @@ class _CardDetailState extends State<CardDetail> {
                         itemBuilder: (BuildContext context, int index) {
                           return Container(
                             height: mainHeight * .25,
-                            child: Card(
-                              child: Column(
-                                children: [
-                                  Expanded(
-                                    flex: 5,
-                                    child: Container(
-                                      child: Image(
-                                        image: AssetImage(MedievalData()
-                                            .northIndiaDynasty[widget.indexImported]
-                                            .kings[index]
-                                            .images
-                                            .image),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => KingDetail(
+                                      kingDate: MedievalData()
+                                          .northIndiaDynasty[
+                                      widget.indexImported]
+                                          .kings[index]
+                                          .era
+                                          .first
+                                          .toString() +
+                                          " - " +
+                                          MedievalData()
+                                              .northIndiaDynasty[
+                                          widget.indexImported]
+                                              .kings[index]
+                                              .era
+                                              .second
+                                              .toString(),
+                                      kingImage: MedievalData()
+                                          .northIndiaDynasty[
+                                      widget.indexImported]
+                                          .kings[index]
+                                          .images
+                                          .image,
+                                      kingName: MedievalData()
+                                          .northIndiaDynasty[
+                                      widget.indexImported]
+                                          .kings[index]
+                                          .kingsName,
+                                      index: index,
+                                      indexMed: widget.indexImported,
+                                    )));
+                              },
+                              child: Card(
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      flex: 5,
+                                      child: Container(
+                                        child: Image(
+                                          image: AssetImage(MedievalData()
+                                              .northIndiaDynasty[
+                                          widget.indexImported]
+                                              .kings[index]
+                                              .images
+                                              .image),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  Text(
-                                    MedievalData()
-                                        .northIndiaDynasty[widget.indexImported]
-                                        .kings[index]
-                                        .kingsName,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black54,
-                                      fontSize: 16,
+                                    Text(
+                                      MedievalData()
+                                          .northIndiaDynasty[widget.indexImported]
+                                          .kings[index]
+                                          .kingsName,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black54,
+                                        fontSize: 16,
+                                      ),
                                     ),
-                                  ),
-                                  Text(
-                                    MedievalData()
-                                        .northIndiaDynasty[0]
-                                        .kings[index]
-                                        .era
-                                        .first
-                                        .toString() +
-                                        " - " +
-                                        MedievalData()
-                                            .northIndiaDynasty[0]
-                                            .kings[index]
-                                            .era
-                                            .second
-                                            .toString(),
-                                    style: TextStyle(
-                                      color: Colors.black,
+                                    Text(
+                                      MedievalData()
+                                          .northIndiaDynasty[
+                                      widget.indexImported]
+                                          .kings[index]
+                                          .era
+                                          .first
+                                          .toString() +
+                                          " - " +
+                                          MedievalData()
+                                              .northIndiaDynasty[
+                                          widget.indexImported]
+                                              .kings[index]
+                                              .era
+                                              .second
+                                              .toString(),
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           );

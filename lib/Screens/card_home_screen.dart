@@ -22,6 +22,7 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
           child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -62,7 +63,7 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
                 Expanded(
                   child: CardContainer(
                     'Modern History',
-                    'https://bit.ly/33MQQC3',
+                    'https://images-na.ssl-images-amazon.com/images/I/81Av2CgJKqL.jpg',
                   ),
                 ),
                 Expanded(
