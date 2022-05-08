@@ -1,4 +1,6 @@
 
+import 'package:flutter/cupertino.dart';
+
 class MedievalData {
   List<Dynasty> northIndiaDynasty = [
     Dynasty(
@@ -600,170 +602,171 @@ class EventsData {
     Events(
         date: 1206,
         heading: "Succession of Qutubuddin Aibak",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:QutbMinarNewDelhiFromSouth.jpg",
-            notes: "The Qutb Minar in Delhi was started by Qutb al-Din Aibak in 1199"),
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/0/01/QutbMinarNewDelhiFromSouth.jpg",
+            notes: "The Qutb Minar in Delhi was started by Qutb al-Din Aibak in 11991"),
         detail: "Qutubbin Aibak founded IIbari/Slave dynasty"),
     Events(
         date: 1210,
         heading: "Death of Qutubuddin Aibak",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Grave_of_Sultan_Qutb_al-Din_Aibak.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Grave_of_Sultan_Qutb_al-Din_Aibak.jpg",
             notes: "Grave of Sultan Qutb ud-Din Aybak, in Anarkali Bazaar in Lahore"),
         detail: "He died in 1210 while playing Chaugan or Polo"),
     Events(
         date: 1211,
         heading: "Illtutmish occupied the throne of Delhi",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Iltutmish_Tomb_N-DL-93.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/5/57/Iltutmish_Tomb_N-DL-93.jpg",
             notes: "Illtumish Tomb in Qutub Minar Complex"),
         detail: "Shamsuddin Illtutmish He was a slave of Qutubuddin Aibak of Mamluke tribe and occupied the throne of Delhi in 1211"),
     Events(
         date: 1221,
         heading: "Chengiz Khan invaded India",
-        images: ImageData(image: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi0.wp.com%2Findianinterest.com%2Fwp-content%2Fuploads%2F2020%2F12%2F01.jpg%3Ffit%3D1000%252C1000%26ssl%3D1&imgrefurl=https%3A%2F%2Findianinterest.com%2Fhistory%2Frevealed-why-genghis-khan-refused-to-invade-india%2F&tbnid=xoRDm0_jC_vABM&vet=12ahUKEwiE5LnL4s33AhWfgGMGHemDBocQMygEegUIARC2AQ..i&docid=iBVZEXsMXTj2MM&w=1000&h=1000&q=Chengiz%20Khan%20invaded%20India&hl=en&ved=2ahUKEwiE5LnL4s33AhWfgGMGHemDBocQMygEegUIARC2AQ",
+        images: ImageData(image: "https://discovery-place.imgix.net/craft3/general-images/khan-statue_180802_201041.jpg?h=355&w=355&fit=crop&auto=format%2Cenhance&q=80",
             notes: "Chengiz Khan"),
         detail: "Mongol invasion -Chengiz Khan invaded India"),
     Events(
         date: 1236,
         heading: "Succession of Razia Sultana ",
-        images: ImageData(image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Flearn.culturalindia.net%2Frazia-sultana.html&psig=AOvVaw2hKaZAhd86t-y-stu2NiSE&ust=1652025918450000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNCI4aXizfcCFQAAAAAdAAAAABAD",
+        images: ImageData(image: "https://learn.culturalindia.net/wp-content/uploads/2018/07/razia-sultana-2.jpg",
             notes: "Razia Sultana"),
         detail: "Ruknuddin He was deposed by Razia, daughter of Illtutmish"),
     Events(
         date: 1240,
         heading: "Death of Razia Sultana",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Tomb_of_Rajia_Sultana3.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tomb_of_Rajia_Sultana3.jpg",
             notes: "Graves of Razia and her sister"),
         detail: "Razia became the victim of a conspiracy and was assassinated near Kaithal (Haryana)."),
     Events(
         date: 1296,
         heading: "Accession of Alauddin Khilji",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:THE_ARMY_OF_ALA-UD-DEEN_ON_THE_MARCH.gif",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/THE_ARMY_OF_ALA-UD-DEEN_ON_THE_MARCH.gif",
             notes: "The army of Alaudeen on March to Deccan, a 20th-century artist's impression"),
         detail: "Jalal-ud-din Khilji (1290-1296) was brutally murdered by his nephew Ala-ud-din in 1296."),
     Events(
         date: 1316,
         heading: "Death of Alauddin Khilji",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Tomb_of_Alauddin_Khilji,_Qutub_Minar_complex,_Delhi.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Tomb_of_Alauddin_Khilji%2C_Qutub_Minar_complex%2C_Delhi.jpg/1200px-Tomb_of_Alauddin_Khilji%2C_Qutub_Minar_complex%2C_Delhi.jpg",
             notes: "Tomb of Alauddin Khalji, Qutb complex, Delhi."),
         detail: "Death of Alauddin Khilji"),
     Events(
         date: 1325,
         heading: "Accession of Muhammad-bin-Tughlaq",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Muhammad_Tughlak_orders_his_brass_coins_to_pass_for_silver,_A.D._1330.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/2/23/Muhammad_Tughlak_orders_his_brass_coins_to_pass_for_silver%2C_A.D._1330.jpg",
             notes: "Muhammad Tughlak orders his brass coins to pass for silver, 1330 CE"),
         detail: "Prince Jauna, son of Ghiyasuddin Tughlaq ascended the throne in 1325"),
     Events(
         date: 1327,
         heading: "Delhi to Devagiri",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:The_siege_of_Daulatabad_(April-June_1633).jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/The_siege_of_Daulatabad_%28April-June_1633%29.jpg",
             notes: "The Mughal Army captures Devagiri."),
         detail: "Capital was transferred from Delhi to Devagiri (Daulatabad)by Muhammad-bin-Tughlaq"),
     Events(
         date: 1336,
         heading: "Foundation of Vijaynagar empire",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Panaromic_view_of_the_natural_fortification_and_landscape_at_Hampi.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Panaromic_view_of_the_natural_fortification_and_landscape_at_Hampi.jpg",
             notes: "Medieval City of Vijayanagara"),
         detail: " Vijaynagar empire Founded in 1336 in the wake of the rebellions against Tughluq rule in the Deccan,"),
     Events(
         date: 1351,
         heading: "Accession of Firoz Shah Tughlaq",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Firoz_Shah_Taghlak.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/1/12/Firoz_Shah_Taghlak.jpg",
             notes: "Firoz Shah Tughlaq"),
         detail: "Firoz Shah Tughlaq ascended the throne after the death of his cousin Muhammad-bin Tughlaq ("),
     Events(
         date: 1398,
         heading: "Timur’s invasion of India",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Timur_reconstruction03.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/0/00/Timur_reconstruction03.jpg",
             notes: "Timur facial reconstruction from skull, by Mikhail Mikhaylovich Gerasimov"),
         detail: "Timur invaded northern India, attacking the Delhi Sultanate ruled by Sultan Nasir-ud-Din Mahmud Shah Tughluq of the Tughlaq dynasty"),
     Events(
         date: 1469,
         heading: "Birth of Guru Nanak",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg",
             notes: "19th-century mural painting from Gurdwara Baba Atal depicting Nanak"),
         detail: " Gurū Nānak also referred to as Bābā Nānak ('father Nānak'), was the founder of Sikhism and is the first of the ten Sikh Gurus"),
     Events(
         date: 1494,
         heading: "Accession of Babur in Farghana",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Babur_Marches_from_Kabul_to_Hindustan_in_1507.JPG",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Babur_Marches_from_Kabul_to_Hindustan_in_1507.JPG",
             notes: "Babur leaves for Hindustan from Kabul"),
         detail: "Babur ascended the throne of Fergana in its capital Akhsikent in 1494 at the age of twelve "),
     Events(
         date: 1497,
         heading: "First expedition of Vasco da Gama to India",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Ignoto_portoghese,_ritratto_di_un_cavaliere_dell%27ordine_di_cristo,_1525-50_ca._02.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ignoto_portoghese%2C_ritratto_di_un_cavaliere_dell%27ordine_di_cristo%2C_1525-50_ca._02.jpg",
             notes: "Vasco da Gama was best known for being the first to sail from Europe to India by rounding Africa's Cape of Good Hope."),
         detail: "Vasco da Gama was best known for being the first to sail from Europe to India by rounding Africa's Cape of Good Hope"),
     Events(
         date: 1526,
         heading: "Foundation of Mughal dynasty by Babur",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Khalili_Collection_Islamic_Art_mss_0874.3.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Khalili_Collection_Islamic_Art_mss_0874.3.jpg",
             notes: "Group portrait of Mughal rulers, from Babur to Aurangzeb, with the Mughal ancestor Timur seated in the middle. "),
         detail:
             "First Battle of Panipat Babur defeated Ibrahim Lodhi Foundation of Mughal dynasty by Babur"),
     Events(
         date: 1527,
         heading: "Battle of Khanwa-Babur defeated Rana Sanga",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Babur%E2%80%99s_army_in_battle_against_the_army_of_Rana_Sanga_at.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/5/57/Babur%E2%80%99s_army_in_battle_against_the_army_of_Rana_Sanga_at.jpg",
             notes: "Mughal painting depicting the Rajput Army (Left) battling the Mughal Army (Right)"),
         detail: "It was fought between the invading Timurid forces of Babur and the Rajput confederacy led by Rana Sanga for suprermacy of Northern India"),
     Events(
         date: 1530,
         heading: "Death of Babur Accession of Humayun",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Babur_and_Humayun.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Babur_and_Humayun.jpg",
             notes: "Babur and his heir Humayun"),
         detail: " After Babur's death, he ascended the throne of Mughal Empire"),
     Events(
         date: 1539,
         heading: "Battle of Chausa",
-        images: ImageData(image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Findianhistoryx%2Fstatus%2F1078904226531733512&psig=AOvVaw0VRXPoLSF1mahCujhccjv9&ust=1652024551715000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCICz8prdzfcCFQAAAAAdAAAAABAD",
+        images: ImageData(image: "https://th.bing.com/th/id/R.5ae8e6889af9406a204e3f04329c5e9a?rik=gA3ZSaOP6719sw&riu=http%3a%2f%2fwww.hindigyansagar.in%2fwp-content%2fuploads%2f2019%2f06%2fchausa-battle-750x420.jpg&ehk=0zRz9XxEQIOr02VQ5Pq58miv%2fg9NjKU5%2fC37WhrSn5w%3d&risl=&pid=ImgRaw&r=0",
             notes: "Battle of Chausa"),
         detail: " Battle of Chausa Sher Shah Suri defeated Humayun Sher Shah Suri became  Emperor of India"),
     Events(
         date: 1555,
         heading: "Humayun recaptured ",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:%D0%A5%D1%83%D0%BC%D0%B0%D1%8E%D0%BD._%D0%94%D0%B5%D1%82%D0%B0%D0%BB%D1%8C_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D1%8B_%D0%B8%D0%B7_%D0%91%D0%B0%D0%B1%D1%83%D1%80%D0%BD%D0%B0%D0%BC%D0%B5._1590%D0%B5_%D0%B3%D0%B3._%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,_%D0%93%D0%9C%D0%92.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/%D0%A5%D1%83%D0%BC%D0%B0%D1%8E%D0%BD._%D0%94%D0%B5%D1%82%D0%B0%D0%BB%D1%8C_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D1%8B_%D0%B8%D0%B7_%D0%91%D0%B0%D0%B1%D1%83%D1%80%D0%BD%D0%B0%D0%BC%D0%B5._1590%D0%B5_%D0%B3%D0%B3._%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C_%D0%93%D0%9C%D0%92.jpg",
             notes: "Humayun, detail of miniature of the Baburnama"),
         detail: "He then recaptured his position in Delhi in 1555 after the breaking down of the Pathans."),
     Events(
         date: 1556,
         heading: "Second Battle of Panipat",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:The_defeat_of_Hemu,_Akbarnama.jpg",
-            notes: "The defeat of Hemu, a c. 1590s painting by Kankar of the Second Battle of Panipat taken from the Akbarnama."),
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/2/2e/The_defeat_of_Hemu%2C_Akbarnama.jpg",
+            notes: "The defeat of Hemu, "
+                "a 1590s painting by Kankar of the Second Battle of Panipat taken from the Akbarnama."),
         detail: "The Second Battle of Panipat was fought  between the Hindu king of Delhi Hem Chandra Vikramaditya, also called Hemu and Akbar"),
     Events(
         date: 1556,
         heading: "Battle of Talikota",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Battle_of_Talikota_(detail).jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Battle_of_Talikota_%28detail%29.jpg",
             notes: "The Battle of Talikota. Husain Shah (riding a horse) orders the decapitation of Ramaraya (reigned 1542-65), the defeated ruler of Vijaianagara. Ta'rif-i Husain Shahi (Chronicle of Husain Shah), 16th century"),
         detail: "The Battle of Talikota  was a watershed battle held between the Vijayanagara Empire and an alliance of the Deccan sultanates"),
     Events(
         date: 1576,
         heading: "Battle of Haldighati",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:The_Battle_of_Haldighati_by_Chokha.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/9/9f/The_Battle_of_Haldighati_by_Chokha.jpg",
             notes: "A depiction of the traditional account of the battle by the painter Chokha, 1810 – 1820.["),
         detail: "Battle of Haldighati Rana Pratap was defeated by Akbar"),
     Events(
         date: 1582,
         heading: "Din-i-Ilahi founded by Akbar",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:AbulFazlPresentingAkbarnama.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/AbulFazlPresentingAkbarnama.jpg",
             notes: "Abu'l-Fazl, one of the disciples of Din-i-Ilahi, presenting Akbarnama to Akbar, Mughal miniature"),
         detail: "the religion of God,” was a system of religious beliefs introduced by the Mughal emperor Akbar"),
     Events(
         date: 1600,
         heading: "East India Company established",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Jameslancaster.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/d/df/Jameslancaster.jpg",
             notes: "James Lancaster commanded the first East India Company voyage in 1601"),
         detail: "The East India Company was incorporated by royal charter on December 31, 1600"),
     Events(
         date: 1605,
         heading: "Death of Akbar and accession of Jahangir",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Gate_of_the_Tomb_of_Akbar_at_Sikandra,_Agra,_India,_1795.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Gate_of_the_Tomb_of_Akbar_at_Sikandra%2C_Agra%2C_India%2C_1795.jpg",
             notes: "Gate of Akbar's mausoleum at Sikandra, Agra, 1795"),
         detail: "Jahangir ascended the throne forcefully, which did not go down well with many within the royal court"),
     Events(
         date: 1606,
         heading: "Execution of Guru Arjun Dev Guru Arjun Dev",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Gurdwara_Dera_Sahib_and_Samadhi_of_Ranjit_Singh.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Gurdwara_Dera_Sahib_and_Samadhi_of_Ranjit_Singh.jpg",
             notes: "The Gurdwara Dera Sahib in Lahore, Pakistan, commemorates the spot where Guru Arjan Dev is traditionally believed to have died"),
         detail: "The mainstream Sikh tradition recognised Guru Arjan as the fifth Guru, and Hargobind as the sixth Guru."),
     Events(
@@ -775,19 +778,19 @@ class EventsData {
     Events(
         date: 1628,
         heading: "Shahjahan becomes Emperor of India",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Payag,_Shah_Jahan_on_Horseback,_Folio_from_the_Shah_Jahan_Album_ca._1630,_Metmuseum.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Payag%2C_Shah_Jahan_on_Horseback%2C_Folio_from_the_Shah_Jahan_Album_ca._1630%2C_Metmuseum.jpg",
             notes: "Shah Jahan on horseback (during his youth"),
         detail: "Shahjahan executed all of his rivals for the throne and crowned himself emperor on January 1628 in Agra"),
     Events(
         date: 1631,
         heading: "Death of Mumtaz",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Interior4.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Interior4.jpg",
             notes: "Tomb of Mumtaz Mahal in the Taj Mahal, alongside her husband Shah Jahan"),
         detail: "Mumtaz Mahal died in 1631 in Burhanpur, Deccan (present-day Madhya Pradesh), during the birth of her 14th child"),
     Events(
         date: 1634,
         heading: "The English permitted to trade in Bengal",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Jahangir_investing_a_courtier_with_a_robe_of_honour_watched_by_Sir_Thomas_Roe,_English_ambassador_to_the_court_of_Jahangir_at_Agra_from_1615-18,_and_others.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Jahangir_investing_a_courtier_with_a_robe_of_honour_watched_by_Sir_Thomas_Roe%2C_English_ambassador_to_the_court_of_Jahangir_at_Agra_from_1615-18%2C_and_others.jpg",
             notes: "The emperor Jahangir investing a courtier with a robe of honour, watched by Sir Thomas Roe, English ambassador to the court of Jahangir at Agra from 1615 to 1618, and others"),
         detail: "On 2 February, the English obtained a farman from Emperor shahjahan permitting them to pursue trade and commerce in Bengal."),
     Events(
@@ -799,59 +802,68 @@ class EventsData {
     Events(
         date: 1665,
         heading: "Shivaji imprisoned by Aurangzeb",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Raja_Shivaji_at_Aurangzeb%27s_Darbar-_M_V_Dhurandhar.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Raja_Shivaji_at_Aurangzeb%27s_Darbar-_M_V_Dhurandhar.jpg/1200px-Raja_Shivaji_at_Aurangzeb%27s_Darbar-_M_V_Dhurandhar.jpg",
             notes: "20th century depiction by M.V. Dhurandhar of Raja Shivaji at the court of Mughal Badshah, Aurangzeb."),
         detail: "it was clear that it was a trap and Shivaji and his son were captives. They were imprisoned for many months"),
     Events(
         date: 1666,
         heading: "Death of Shahjahan",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Abanindranath_Tagore_-_The_Passing_of_Shah_Jahan,_1902.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Abanindranath_Tagore_-_The_Passing_of_Shah_Jahan%2C_1902.jpg",
             notes: "The Passing of Shah Jahan is a Miniature painting, painted by the Indian artist Abanindranath Tagore in 1902"),
         detail: "His daughter Jahanara was with her. In January 1666 Shahjaha's health again became serious and he died on 22 January, 1666."),
     Events(
         date: 1675,
         heading: "Execution of Guru Teg Bahadur Guru Teg Bahadur",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Portrait_of_Guru_Tegh_Bahadur_by_painter_Ahsan.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/0/09/Portrait_of_Guru_Tegh_Bahadur_by_painter_Ahsan.jpg",
             notes: "A mid 17th century portrait of Guru Tegh Bahadur painted by Ahsan"),
         detail:
             "Execution of Guru Teg Bahadur Guru Teg Bahadur was the 9th Guru of Sikhs"),
     Events(
         date: 1680,
         heading: "Death of Shivaji",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Shivaji_British_Museum.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/e/ea/Shivaji_British_Museum.jpg",
             notes: "Shivaji's portrait (1680s) from the collection of British Museum"),
         detail: "Shivaji died around 3–5 April 1680 at the age of 50,[129] on the eve of Hanuman Jayanti. The cause of Shivaji's death is disputed."),
     Events(
         date: 1707,
         heading: "Death of Aurangzeb",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Tomb_of_Aurangzeb_at_Khuldabad,_Aurangabad,_1850s.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/7/71/Tomb_of_Aurangzeb_at_Khuldabad%2C_Aurangabad%2C_1850s.jpg",
             notes: "The unmarked grave of Aurangzeb in the mausoleum at Khuldabad, Maharashtra."),
         detail: ""),
     Events(
         date: 1708,
         heading: "Death of Guru Gobind Singh",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Takht_Shri_Hazoor_Sahib_Gurudwara_Nanded.JPG",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/d/db/Takht_Shri_Hazoor_Sahib_Gurudwara_Nanded.JPG",
             notes: "Takht Sri Hazur Sahib, Nanded, built over the place where Guru Gobind Singh was cremated in 1708, the inner chamber is still called Angitha Sahib."),
         detail:
             "Death of Guru Gobind Singh Guru Gobind Singh was 10th Guru of Sikhs"),
     Events(
         date: 1739,
         heading: "Nadir Shah invades India",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Nader_Shah_afshar.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/7/79/Nader_Shah_afshar.jpg",
             notes: "a vilifying portrayal of Nader Shah in the battle of Karnal by Adel Adili"),
         detail: "His army had easily defeated the Mughals at the Battle of Karnal and would eventually capture the Mughal capital in the aftermath of the battle"),
     Events(
         date: 1757,
         heading: "Battle of Plassey",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:Clive.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Clive.jpg",
             notes: "Clive meeting Mir Jafar after the Battle of Plassey, oil on canvas (Francis Hayman, 1762)"),
         detail:
             "The Battle of Plassey was a decisive victory of the British East India Company over the Nawab of Bengal and his French[1] allies on 23 June 1757, under the leadership of Robert Clive,"),
     Events(
         date: 1761,
         heading: "Third battle of Panipat",
-        images: ImageData(image: "https://en.wikipedia.org/wiki/File:The_Third_battle_of_Panipat_13_January_1761.jpg",
+        images: ImageData(image: "https://upload.wikimedia.org/wikipedia/commons/3/37/The_Third_battle_of_Panipat_13_January_1761.jpg",
             notes: " Faizabad-style painting of the Third Battle of Panipat; the centre of the image is dominated by the twin arcs of the lines of guns firing at each other with smoke and destruction in between."),
         detail: "The Third Battle of Panipat took place on 14 January 1761 between the Maratha Empire and the invading army of the Durrani Afghan Empire")
   ];
+  List<Events> getEvent(Pair pair ){
+    List<Events> newList = [] ;
+    for(var a in eventsList){
+      if(a.date>=pair.first && a.date<=pair.second){
+        newList.add(a);
+      }
+    }
+    return newList;
+  }
 }

@@ -3,7 +3,6 @@ import 'package:aryavarta/Screens/quiz_screen.dart';
 import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:readmore/readmore.dart';
 
 import '../reusable_card.dart';
 
@@ -25,6 +24,7 @@ class _MedivalContentState extends State<MedivalContent> {
         backgroundColor: Colors.white,
         body: Container(
           margin: EdgeInsets.all(8),
+
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -45,15 +45,7 @@ class _MedivalContentState extends State<MedivalContent> {
                                   .image,
                               date: MedievalData()
                                   .northIndiaDynasty[index]
-                                  .era
-                                  .first
-                                  .toString() +
-                                  "-" +
-                                  MedievalData()
-                                      .northIndiaDynasty[index]
-                                      .era
-                                      .second
-                                      .toString(),
+                                  .era,
                               body: MedievalData().northIndiaDynasty[index].about,
                               heading:
                               MedievalData().northIndiaDynasty[index].dynastyName,
@@ -91,6 +83,7 @@ class _MedivalContentState extends State<MedivalContent> {
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Color(0xff283593)),
+
                     ),
                     child: Text('Quiz')
                 )
