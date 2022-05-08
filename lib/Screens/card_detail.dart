@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class CardDetail extends StatefulWidget {
   final String image;
   final String heading;
-  final String date;
+  final Pair date;
   final String body;
   final int indexImported;
 
@@ -29,6 +29,7 @@ class _CardDetailState extends State<CardDetail> {
     final appBarHieght = AppBar().preferredSize.height;
     final mainHeight = MediaQuery.of(context).size.height - appBarHieght;
     final mainWidth = MediaQuery.of(context).size.width;
+    List<Events> eventList =  EventsData().getEvent(widget.date);
     return SafeArea(
         child: Scaffold(
       body: Container(
@@ -65,7 +66,7 @@ class _CardDetailState extends State<CardDetail> {
                             ),
                           ),
                           Text(
-                            widget.date,
+                            widget.date.first.toString()+"-"+widget.date.second.toString(),
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.black54,
@@ -271,7 +272,7 @@ class _CardDetailState extends State<CardDetail> {
               Container(
                 height: mainHeight * .25,
                 child: ListView.builder(
-                    itemCount: 8,
+                    itemCount: eventList.length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
                       return Container(
@@ -283,12 +284,12 @@ class _CardDetailState extends State<CardDetail> {
                                 flex: 5,
                                 child: Container(
                                   child: Image(
-                                    image: AssetImage("asset/1206-12.jpeg"),
+                                    image: NetworkImage(eventList[index].images.image)
                                   ),
                                 ),
                               ),
                               Text(
-                                "Haldi War",
+                                eventList[index].heading,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black54,
@@ -296,7 +297,7 @@ class _CardDetailState extends State<CardDetail> {
                                 ),
                               ),
                               Text(
-                                "1206",
+                                eventList[index].date.toString(),
                                 style: TextStyle(
                                   color: Colors.black,
                                 ),

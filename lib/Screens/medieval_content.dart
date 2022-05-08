@@ -2,7 +2,6 @@ import 'package:aryavarta/Screens/card_detail.dart';
 import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:readmore/readmore.dart';
 
 import '../reusable_card.dart';
 
@@ -39,15 +38,7 @@ class _MedivalContentState extends State<MedivalContent> {
                             .image,
                         date: MedievalData()
                                 .northIndiaDynasty[index]
-                                .era
-                                .first
-                                .toString() +
-                            "-" +
-                            MedievalData()
-                                .northIndiaDynasty[index]
-                                .era
-                                .second
-                                .toString(),
+                                .era,
                         body: MedievalData().northIndiaDynasty[index].about,
                         heading:
                             MedievalData().northIndiaDynasty[index].dynastyName,
