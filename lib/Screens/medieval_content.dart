@@ -1,4 +1,5 @@
 import 'package:aryavarta/Screens/card_detail.dart';
+import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
@@ -14,7 +15,7 @@ class MedivalContent extends StatefulWidget {
 
 class _MedivalContentState extends State<MedivalContent> {
   List<bool> isOpen = [false, false, false];
-  List<String> dateList=['1200','1300','1400','1500','1600','1700'];
+  List<String> dateList = ['1200', '1300', '1400', '1500', '1600', '1700'];
   @override
   Widget build(BuildContext context) {
     final appBarHieght = AppBar().preferredSize.height;
@@ -25,34 +26,54 @@ class _MedivalContentState extends State<MedivalContent> {
         body: Container(
           margin: EdgeInsets.all(8),
           child: ListView.builder(
-            itemCount: 5,
+            itemCount: MedievalData().northIndiaDynasty.length,
             shrinkWrap: true,
             itemBuilder: (BuildContext context, int index) {
               return ReusableCard(
-                onTap: (){
+                onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => CardDetail(
-
-                        image: "asset/1206-12.jpeg",
-                        date: dateList[index],
-                        body: 'Slave dynasty, (1206–90)'
-                            ', line of sultans at Delhi, India, that lasted for nearly a century. '
-                            'Their family name was Muiʿzzī.Slave dynasty, (1206–90), line of sultans at Delhi, India',
-                        heading: "SLAVE DYNASTY",
+                        image: MedievalData()
+                            .northIndiaDynasty[index]
+                            .images
+                            .image,
+                        date: MedievalData()
+                            .northIndiaDynasty[index]
+                            .era
+                            .first
+                            .toString() +
+                            "-" +
+                            MedievalData()
+                                .northIndiaDynasty[index]
+                                .era
+                                .second
+                                .toString(),
+                        body: MedievalData().northIndiaDynasty[index].about,
+                        heading:
+                        MedievalData().northIndiaDynasty[index].dynastyName,
+                        indexImported: index,
                       ),
                     ),
                   );
                 },
                 tag: 'cardImage',
                 mainHeight: mainHeight,
-                image: "asset/1206-12.jpeg",
-                date: dateList[index],
-                body: 'Slave dynasty, (1206–90)'
-                    ', line of sultans at Delhi, India, that lasted for nearly a century. '
-                    'Their family name was Muiʿzzī.Slave dynasty, (1206–90), line of sultans at Delhi, India',
-                heading: "SLAVE DYNASTY",
+                image: MedievalData().northIndiaDynasty[index].images.image,
+                date: MedievalData()
+                    .northIndiaDynasty[index]
+                    .era
+                    .first
+                    .toString() +
+                    "-" +
+                    MedievalData()
+                        .northIndiaDynasty[index]
+                        .era
+                        .second
+                        .toString(),
+                body: MedievalData().northIndiaDynasty[index].about,
+                heading: MedievalData().northIndiaDynasty[index].dynastyName,
               );
             },
           ),

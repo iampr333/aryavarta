@@ -1,7 +1,6 @@
+import 'package:aryavarta/Screens/medieval_content.dart';
 import 'package:aryavarta/card_container_style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:aryavarta/Constant.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -27,7 +26,7 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
           child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Expanded(
+          const Expanded(
             flex: 1,
             child: SizedBox(),
           ),
@@ -42,9 +41,15 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
                   ),
                 ),
                 Expanded(
-                  child: CardContainer(
-                    'Medieval history',
-                    'https://bit.ly/3peFJct',
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => MedivalContent()));
+                    },
+                    child: CardContainer(
+                      'Medieval history',
+                      'https://bit.ly/3peFJct',
+                    ),
                   ),
                 ),
               ],
@@ -69,7 +74,7 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
               ],
             ),
           ),
-          Expanded(
+          const Expanded(
             flex: 1,
             child: SizedBox(),
           ),
