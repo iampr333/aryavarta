@@ -1,7 +1,10 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:aryavarta/Screens/medieval_content.dart';
 import 'package:aryavarta/Screens/quiz_screen.dart';
 import 'package:aryavarta/card_container_style.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -23,17 +26,36 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: 12,
+            ),
+            FaIcon(
+              FontAwesomeIcons.bookJournalWhills,
+            ),
+            Expanded(child: SizedBox()),
+            Text(
+              "ARYAVART : THE HISTORY",
+            ),
+            Expanded(child: SizedBox()),
+          ],
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.teal.shade800,
+      ),
       backgroundColor: Colors.white,
       body: Center(
           child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const Expanded(
-            flex: 1,
-            child: SizedBox(),
+          SizedBox(
+            height: 12,
           ),
           Expanded(
-            flex: 3,
+            flex: 6,
             child: Row(
               children: [
                 Expanded(
@@ -58,7 +80,7 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 6,
             child: Row(
               children: [
                 Expanded(
@@ -76,18 +98,8 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
               ],
             ),
           ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => QuizScreen()));
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Color(0xff283593)),
-              ),
-              child: Text('Quiz')),
-          const Expanded(
-            flex: 1,
-            child: SizedBox(),
+          SizedBox(
+            height: 12,
           ),
         ],
       )),

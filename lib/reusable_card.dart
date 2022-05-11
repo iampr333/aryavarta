@@ -7,7 +7,6 @@ class ReusableCard extends StatelessWidget {
   String heading;
   String date;
   String body;
-  String tag;
   final double mainHeight;
   Function()? onTap;
   ReusableCard(
@@ -15,7 +14,6 @@ class ReusableCard extends StatelessWidget {
       required this.mainHeight,
       required this.date,
       required this.heading,
-      required this.tag,
       required this.body,
       this.onTap});
 

@@ -16,7 +16,7 @@ class CardContainer extends StatelessWidget {
     return Card(
       margin: EdgeInsets.all(8),
       elevation: 15,
-      color: Colors.teal,
+      color: Colors.teal.shade700,
       child: Column(
         children: [
           Expanded(

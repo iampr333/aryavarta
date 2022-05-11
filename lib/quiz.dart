@@ -19,13 +19,13 @@ class Quiz extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Text('Question ${questionIndex+1} out of ${questions.length}',style: TextStyle(
-            color: Colors.white,
-            fontSize: 28,
-            fontWeight: FontWeight.w600
-          ),),
+          Text(
+            'Question ${questionIndex + 1} out of ${questions.length}',
+            style: TextStyle(
+                color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
+          ),
           SizedBox(
-            height: 10,
+            height: 32,
           ),
           Question(
             questions[questionIndex]['questionText'],
@@ -39,10 +39,13 @@ class Quiz extends StatelessWidget {
           ),
           SizedBox(
             height: 10,
-          ),//Question
+          ), //Question
           ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
               .map((answer) {
-            return Answer(() => answerQuestion(answer['score']),answer['text'],);
+            return Answer(
+              () => answerQuestion(answer['score']),
+              answer['text'],
+            );
           }).toList()
         ],
       ),

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:aryavarta/Screens/bottom_tab_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:aryavarta/Screens/card_home_screen.dart';
@@ -27,8 +28,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
         Duration(seconds: 4),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => CardHomeScreen())));
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => bottomTabBar())));
   }
 
   @override

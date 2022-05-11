@@ -3,6 +3,7 @@ import 'package:aryavarta/Screens/quiz_screen.dart';
 import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 import '../reusable_card.dart';
 
@@ -31,45 +32,59 @@ class _MedivalContentState extends State<MedivalContent> {
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, int index) {
-                    return ReusableCard(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CardDetail(
-                              image: MedievalData()
-                                  .northIndiaDynasty[index]
-                                  .images
-                                  .image,
-                              date: MedievalData().northIndiaDynasty[index].era,
-                              body:
-                                  MedievalData().northIndiaDynasty[index].about,
-                              heading: MedievalData()
-                                  .northIndiaDynasty[index]
-                                  .dynastyName,
-                              indexImported: index,
-                            ),
+                    return AnimationConfiguration.staggeredList(
+                      position: index,
+                      duration: const Duration(milliseconds: 650),
+                      child: SlideAnimation(
+                        verticalOffset: 50.0,
+                        child: FadeInAnimation(
+                          child: ReusableCard(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => CardDetail(
+                                    image: MedievalData()
+                                        .northIndiaDynasty[index]
+                                        .images
+                                        .image,
+                                    date: MedievalData()
+                                        .northIndiaDynasty[index]
+                                        .era,
+                                    body: MedievalData()
+                                        .northIndiaDynasty[index]
+                                        .about,
+                                    heading: MedievalData()
+                                        .northIndiaDynasty[index]
+                                        .dynastyName,
+                                    indexImported: index,
+                                  ),
+                                ),
+                              );
+                            },
+                            mainHeight: mainHeight,
+                            image: MedievalData()
+                                .northIndiaDynasty[index]
+                                .images
+                                .image,
+                            date: MedievalData()
+                                    .northIndiaDynasty[index]
+                                    .era
+                                    .first
+                                    .toString() +
+                                "-" +
+                                MedievalData()
+                                    .northIndiaDynasty[index]
+                                    .era
+                                    .second
+                                    .toString(),
+                            body: MedievalData().northIndiaDynasty[index].about,
+                            heading: MedievalData()
+                                .northIndiaDynasty[index]
+                                .dynastyName,
                           ),
-                        );
-                      },
-                      tag: 'cardImage',
-                      mainHeight: mainHeight,
-                      image:
-                          MedievalData().northIndiaDynasty[index].images.image,
-                      date: MedievalData()
-                              .northIndiaDynasty[index]
-                              .era
-                              .first
-                              .toString() +
-                          "-" +
-                          MedievalData()
-                              .northIndiaDynasty[index]
-                              .era
-                              .second
-                              .toString(),
-                      body: MedievalData().northIndiaDynasty[index].about,
-                      heading:
-                          MedievalData().northIndiaDynasty[index].dynastyName,
+                        ),
+                      ),
                     );
                   },
                 ),

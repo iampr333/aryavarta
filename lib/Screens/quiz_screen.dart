@@ -140,17 +140,27 @@ class _QuizScreenState extends State<QuizScreen> {
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          body: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(30.0),
-              child: _questionIndex < _questions.length
-                  ? Quiz(
-                      answerQuestion: _answerQuestion,
-                      questionIndex: _questionIndex,
-                      questions: _questions,
-                    ) //Quiz
-                  : Result(_totalScore, _resetQuiz),
-            ),
+          body: Column(
+            children: [
+              Expanded(
+                child: SizedBox(),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: _questionIndex < _questions.length
+                      ? Quiz(
+                          answerQuestion: _answerQuestion,
+                          questionIndex: _questionIndex,
+                          questions: _questions,
+                        ) //Quiz
+                      : Result(_totalScore, _resetQuiz),
+                ),
+              ),
+              Expanded(
+                child: SizedBox(),
+              ),
+            ],
           ), //Padding
         ),
       ), //Scaffold
