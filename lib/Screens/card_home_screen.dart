@@ -1,4 +1,5 @@
 import 'package:aryavarta/Screens/medieval_content.dart';
+import 'package:aryavarta/Screens/quiz_screen.dart';
 import 'package:aryavarta/card_container_style.dart';
 import 'package:flutter/material.dart';
 
@@ -75,6 +76,15 @@ class _CardHomeScreenState extends State<CardHomeScreen> {
               ],
             ),
           ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => QuizScreen()));
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Color(0xff283593)),
+              ),
+              child: Text('Quiz')),
           const Expanded(
             flex: 1,
             child: SizedBox(),

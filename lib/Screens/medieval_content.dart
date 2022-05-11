@@ -14,8 +14,7 @@ class MedivalContent extends StatefulWidget {
 }
 
 class _MedivalContentState extends State<MedivalContent> {
-
-   @override
+  @override
   Widget build(BuildContext context) {
     final appBarHieght = AppBar().preferredSize.height;
     final mainHeight = MediaQuery.of(context).size.height - appBarHieght;
@@ -24,7 +23,6 @@ class _MedivalContentState extends State<MedivalContent> {
         backgroundColor: Colors.white,
         body: Container(
           margin: EdgeInsets.all(8),
-
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -43,12 +41,12 @@ class _MedivalContentState extends State<MedivalContent> {
                                   .northIndiaDynasty[index]
                                   .images
                                   .image,
-                              date: MedievalData()
+                              date: MedievalData().northIndiaDynasty[index].era,
+                              body:
+                                  MedievalData().northIndiaDynasty[index].about,
+                              heading: MedievalData()
                                   .northIndiaDynasty[index]
-                                  .era,
-                              body: MedievalData().northIndiaDynasty[index].about,
-                              heading:
-                              MedievalData().northIndiaDynasty[index].dynastyName,
+                                  .dynastyName,
                               indexImported: index,
                             ),
                           ),
@@ -56,12 +54,13 @@ class _MedivalContentState extends State<MedivalContent> {
                       },
                       tag: 'cardImage',
                       mainHeight: mainHeight,
-                      image: MedievalData().northIndiaDynasty[index].images.image,
+                      image:
+                          MedievalData().northIndiaDynasty[index].images.image,
                       date: MedievalData()
-                          .northIndiaDynasty[index]
-                          .era
-                          .first
-                          .toString() +
+                              .northIndiaDynasty[index]
+                              .era
+                              .first
+                              .toString() +
                           "-" +
                           MedievalData()
                               .northIndiaDynasty[index]
@@ -69,24 +68,14 @@ class _MedivalContentState extends State<MedivalContent> {
                               .second
                               .toString(),
                       body: MedievalData().northIndiaDynasty[index].about,
-                      heading: MedievalData().northIndiaDynasty[index].dynastyName,
+                      heading:
+                          MedievalData().northIndiaDynasty[index].dynastyName,
                     );
                   },
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                ElevatedButton(
-                    onPressed: (){
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => QuizScreen()));
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Color(0xff283593)),
-
-                    ),
-                    child: Text('Quiz')
-                )
               ],
             ),
           ),

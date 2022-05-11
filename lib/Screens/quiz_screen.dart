@@ -24,75 +24,80 @@ class _QuizScreenState extends State<QuizScreen> {
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText':
+          'During whose reign Mahayana sect of Buddhism came into existence?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': 'Ashoka', 'score': 0},
+        {'text': 'Kanishka', 'score': 10},
+        {'text': 'Ajatsatru', 'score': 0},
+        {'text': 'Nagarjuna', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText':
+          'Which among the following is considered to be the oldest Veda?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': 'Sam Veda', 'score': 0},
+        {'text': 'Yajur Veda', 'score': 0},
+        {'text': 'Rig Veda', 'score': 10},
+        {'text': 'Atharva Veda', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText':
+          'Which of the following Pala Kings founded the Vikramshila University?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': 'Gopala', 'score': 0},
+        {'text': 'Dharmapala', 'score': 10},
+        {'text': 'Devapala', 'score': 0},
+        {'text': 'Mahendrapala', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText':
+          'Which among the following is related to history of Kashmir ?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': 'Rajatarangini', 'score': 10},
+        {'text': 'Ashokavadana', 'score': 0},
+        {'text': 'Vikramorvashiyam ', 'score': 0},
+        {'text': 'Arthashastra', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText':
+          'Which among the following is the theme of “Katyayana Srauta sutra”?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': 'Cooking in vedic eras', 'score': 0},
+        {'text': 'Geometry', 'score': 0},
+        {'text': 'Rules of vedic sacrifices', 'score': 10},
+        {'text': 'Astrology', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText': 'Which of the following age refers to the Old Stone Age?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': 'Paleolithic', 'score': 10},
+        {'text': 'Mesolithic', 'score': 0},
+        {'text': 'Neolithic', 'score': 0},
+        {'text': 'Chalcolithic', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText': 'Which of the following is the other name Indra?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': 'Protosiva', 'score': 0},
+        {'text': 'Purandhar', 'score': 10},
+        {'text': 'Soma', 'score': 0},
+        {'text': 'God of personified water', 'score': 0},
       ],
     },
     {
-      'questionText': 'Who is not king of Slave Dynasty?',
+      'questionText': 'Mahavira passed away at what age?',
       'answers': [
-        {'text': 'Qutubdin Aibak', 'score': 0},
-        {'text': 'Aram Shah', 'score': 0},
-        {'text': 'Jalaluddin Khilji', 'score': 10},
-        {'text': 'Iltutmish', 'score': 0},
+        {'text': '65', 'score': 0},
+        {'text': '70', 'score': 0},
+        {'text': '72', 'score': 10},
+        {'text': '75', 'score': 0},
       ],
     },
   ];
@@ -140,10 +145,10 @@ class _QuizScreenState extends State<QuizScreen> {
               padding: const EdgeInsets.all(30.0),
               child: _questionIndex < _questions.length
                   ? Quiz(
-                answerQuestion: _answerQuestion,
-                questionIndex: _questionIndex,
-                questions: _questions,
-              ) //Quiz
+                      answerQuestion: _answerQuestion,
+                      questionIndex: _questionIndex,
+                      questions: _questions,
+                    ) //Quiz
                   : Result(_totalScore, _resetQuiz),
             ),
           ), //Padding
