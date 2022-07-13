@@ -2,6 +2,7 @@ import 'package:aryavarta/Screens/king_detail.dart';
 import 'package:aryavarta/data/mideval%20history/mideval_data.dart';
 import 'package:aryavarta/dialog_box.dart';
 import 'package:aryavarta/reusable_card.dart';
+import 'package:aryavarta/services/firebase_dynamic_link.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
@@ -66,14 +67,34 @@ class _CardDetailState extends State<CardDetail> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            widget.date.first.toString() +
-                                "-" +
-                                widget.date.second.toString(),
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black54,
-                              fontWeight: FontWeight.w600,
+                          InkWell(
+                            onTap: () async {
+                              String generatedDeepLink =
+                                  await FirebaseDynamicLinkService
+                                      .createDynamicLink(false, MedievalData());
+                              print(generatedDeepLink);
+                            },
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.share,
+                                  size: 20,
+                                  color: Colors.green,
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  widget.date.first.toString() +
+                                      "-" +
+                                      widget.date.second.toString(),
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black54,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],

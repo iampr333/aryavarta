@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "131126057606",
+    "project_id": "aryavart-f7706",
+    "storage_bucket": "aryavart-f7706.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131126057606:android:c4641f75c3a7884057cf07",
+        "android_client_info": {
+          "package_name": "com.example.aryavarta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131126057606-5u1u0is9o4g7grj42o0qqef9aoo0shrg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aryavarta",
+            "certificate_hash": "e28ae3eb817c920408852687c6e2dc085e8da014"
+          }
+        },
+        {
+          "client_id": "131126057606-73us7o1p5v5t8iaigapc2og26tq69hgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkZQLa9p3m3RCufzPaFn0JlAhqaNnA_b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131126057606-73us7o1p5v5t8iaigapc2og26tq69hgp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "131126057606-efrtn5abqf1eqktasgn18egiac27nos1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aryavarta"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
